@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>视频</title>
+<meta name="keywords" content="视频关键字"/>
+<meta name="description" content="视频描述"/>
+<link href="http://localhost/cms/templates/default/Public/css/category.css" rel="stylesheet" />
+<link href="http://localhost/cms/templates/default/Public/css/common.css" rel="stylesheet" />
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/index.js"></script>
+</head>
+<body>
+	<script type='text/javascript' src='http://localhost/cms/hdphp/Extend/Org/Jquery/jquery-1.8.2.min.js'></script>
+<link href="http://localhost/cms/templates/default/Public/css/head.css" rel="stylesheet" />
+<script>
+	// 验证码初始地址
+	var codeSrc = 'http://localhost/cms/index.php/Index/User/showCode.html';
+</script>
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/head.js"></script>
+
+<!-- 遮挡层 -->
+<div id="cover"> </div>
+<!-- 登录框 -->
+<div id="loginBox" url="http://localhost/cms/index.php/Index/User/checkIsLogin.html" app="http://localhost/cms/index.php/Index">
+
+	<h3>登录 <a href="javascript:hideLoginBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="loginForm" action="http://localhost/cms/index.php/Index/User/login.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkLogin.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="lmust" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="lmust"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>没有账号,<a href="javascript:showRegBox();">去注册</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<!-- 注册框 -->
+<div id="regBox">
+	<h3>注册 <a href="javascript:hideRegBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="regForm" action="http://localhost/cms/index.php/Index/User/reg.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkReg.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="must" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>邮箱:</span>
+			<span class='input'><input class="must"  type="text" name="email"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input class="pass1"  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>确认密码:</span>
+			<span class='input'><input class="pass2"  type="password" name="password_d"/></span>
+		</li>
+		<li>
+			<span class='name'>昵称:</span>
+			<span class='input'><input class="must" type="text" name="nickname"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="must"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>已有账号,<a href="javascript:showLoginBox();">去登录</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<div id="top">
+		<div class='pos'>
+			<div class='user' id="user">
+				<img style="margin-top:10px;" id="loading" src="http://localhost/cms/templates/default/public/images/05043156.gif"/>
+			</div>
+			<div class='search'>
+				<form  action="http://localhost/cms/index.php/Index/Search/index.html" method="get">
+					<input class='keywords' type="text" name="keywords" />
+					<input class='submit' type="submit" value="" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<div class='logo'>
+
+		</div>
+		<div class='navigation'>
+			<a href="http://localhost/cms">首页</a>
+									<a href="http://localhost/cms/index.php/Index/List/index/cid/13.html">文字</a>
+							<a href="http://localhost/cms/static/yousheng">有声</a>
+							<a href="http://localhost/cms/static/tupian">图片</a>
+							<a href="http://localhost/cms/static/qushi">趣事</a>
+							<a href="http://localhost/cms/static/shipin">视频</a>
+					</div>
+	</div>
+
+<div id="main">
+		<div class='news'>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1726.html"><img src="http://localhost/cms/upload/72871386932961.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1726.html">你有没有遇到这么一个人</a></h3>
+						<p>你有没有遇到这么一个人，你是他最好的伤药？你有没有遇到这么一个人，你们之间连道歉都不需要？你有没有遇到这么一个人，你们对彼此的习惯了如指掌？你有没有遇到这么一个</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1726.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1724.html"><img src="http://localhost/cms/upload/79861386932914.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1724.html">Todd Laffler的唯美婚礼摄影作品</a></h3>
+						<p>ToddLaffler在十几岁时开始了摄影生涯，他的母亲教会他如何拍摄和冲印黑白照片。拍摄滑板让他拥有了寻找和拍摄最佳时刻的第六感，因此在拍摄婚礼现场时，他善于</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1724.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1722.html"><img src="http://localhost/cms/upload/96401386932886.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1722.html">还有一个也许</a></h3>
+						<p>也许，我是一滴泪水，藏在你深邃的眼眸，只为划过你的脸庞。也许，我是一米阳光，不停转动，只为温暖你的心房。也许，我是一艘小船，漂泊流浪，只为带你到世界的尽头。也许</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1722.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1720.html"><img src="http://localhost/cms/upload/50541386932851.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1720.html">在哪里,我们又或者与谁相逢</a></h3>
+						<p>有时候，我觉得生命就像是一个个看不到方向的转弯在等着你去选择，从心底出发，感受你最喜欢的事情和人。我想那就是你的答案了，也是我的答案，不管我们在哪里又或者与谁相</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1720.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1718.html"><img src="http://localhost/cms/upload/15651386933541.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1718.html">有些事情，还是不要说出口吧</a></h3>
+						<p>有时候，我觉得自己很傻因为喜欢的人是你，所以觉得自己真的好傻明明没有可能，明明没有机会我自己也很清楚这是一场没有结果的事情但是，还是会时不时地想起你然后，心就莫</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1718.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1716.html"><img src="http://localhost/cms/upload/27401386933510.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1716.html">少年的天空有五颜六色的光怪陆离</a></h3>
+						<p>时光在光与影的交错中总会显得凌乱无比，季节被切割成碎片牵连出一系列与旁人有共鸣的片段。有和风有草坪有泥土味道有零碎阳光。少年的天空有五颜六色的光怪陆离。安静就好</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1716.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1714.html"><img src="http://localhost/cms/upload/38361386933401.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1714.html">原来；那些回不去的才是最美的</a></h3>
+						<p>若人生只有初见；我想我们应该去学会淡淡的对待身边的每次。走走停停；反反复复。还是会失望的回到原来的地点；还是想找回到最初那个自己。那些渲染过的温馨画面浮现眼前;</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1714.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1713.html"><img src="http://localhost/cms/upload/53301386933383.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1713.html">真正的爱情是什么</a></h3>
+						<p>单纯喜欢你的人，他看到的是你的现在；真正爱你的人，要和你走的是未来！真正的爱情，不是某一个时刻的承诺和表白，而是之后一起走过的岁月！无论吵闹多少次说多少伤人的话</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1713.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1710.html"><img src="http://localhost/cms/upload/83621386933340.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1710.html">如果我不忙于学习</a></h3>
+						<p>如果我不忙于学习，我一定是刚刚踏出家门，温室的热度还未褪去，即便我苦苦哀求，雪花都对我无动于衷。所以，我认为她一定有着桀骜不驯的性格，只要有一丝人间烟火的气息触</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1710.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1708.html"><img src="http://localhost/cms/upload/68161386933313.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1708.html">我只是个女孩，想要的真的不多</a></h3>
+						<p>我只是个女孩。我希望有人疼，有人爱，有人包容，有人让我撒娇，有人可以吃我做的饭，有人会说我很乖，有人能陪在我身边，有人能在过马路时拉着我的手，有人能给我安全感，</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1708.html" class='more'>更多>></a>
+					</div>
+				</div>
+						<div id='page'>
+				<a href='http://localhost/cms/static/shipin/3.html' class='pre'>上一页</a><a href=http://localhost/cms/static/shipin/1.html>1</a><a href=http://localhost/cms/static/shipin/2.html>2</a><a href=http://localhost/cms/static/shipin/3.html>3</a><strong class='selfpage'>4</strong><a href=http://localhost/cms/static/shipin/5.html>5</a><a href='http://localhost/cms/static/shipin/5.html' class='next'>下一页</a><span class='count'>[共5页] [48条记录]</span>			</div>
+		</div>
+		<div class='sidebar'>
+	<div class='item'>
+		<h2>标签</h2>
+		<div class='tagbox'>
+									<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/31">世界</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/32">奋斗</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/33">相见恨晚</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/34">我很好</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/29">十字架</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/35">悲哀</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/40">花非花</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/39">花朵</a>
+					</div>
+	</div>
+	<div class='item'>
+		<h2>友情链接</h2>
+		<ul class='flink'>
+									<li><a href="http://www.baidu.com">百度</a></li>
+							<li><a href="htttp:www.taobao.com">淘宝</a></li>
+							<li><a href="http://www.tmall.com">天猫</a></li>
+							<li><a href="http://www.sina.com.cn/">新浪</a></li>
+					</ul>
+	</div>
+	<div class='item'>
+		<h2>文章归档</h2>
+		<ul class='flink'>
+							<li style="height:auto;">
+					2012<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-3">2012-3<em>(3)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-4">2012-4<em>(5)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-5">2012-5<em>(4)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-10">2012-10<em>(6)</em></a>
+									</li>
+							<li style="height:auto;">
+					2013<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-9">2013-9<em>(2)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-10">2013-10<em>(312)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-11">2013-11<em>(1)</em></a>
+									</li>
+					</ul>
+	</div>
+</div>
+	</div>
+
+	<div id="footer">
+	<div class='bgbar'></div>
+	<div class='bottom'>
+		<div class='pos'>
+			<div class='footerNav'>
+													<a  target="_blank" href="http://www.houdunwang.com">后盾网</a>
+															<a  target="_blank" href="http://bbs.houdunwang.com">后盾网论坛</a>
+															<a  target="_blank" href="http://study.houdunwang.com">后盾网学习社区</a>
+															<a  target="_blank" href="http://vip.houdunwang.com">后盾网VIP</a>
+										</div>
+			<div class='copyright'>
+				© Copyright 2011-2013 www.houdunwang 			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

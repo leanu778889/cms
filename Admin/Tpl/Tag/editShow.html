@@ -1,0 +1,21 @@
+<load file="__PUBLIC__/common/header.html">
+<body>
+<div id="window">
+	<div class='page_title'>
+		<strong>修改标签名</strong>
+	</div>
+		<form action="{|U('Tag/edit')}/tid/{$tag.tid}" method="post">
+			<table class="table table-bordered" style="width:400px;">
+				<tr>
+					<td>标签名</td>
+					<td><input type="text" name='tname' value='{$tag.tagname}'></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" class="btn" value="提交"></td>
+				</tr>
+			</table>
+		</form>
+</div>
+</body>
+</html>

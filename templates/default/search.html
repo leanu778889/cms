@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>搜索页</title>
+<link href="__PUBLIC__/css/category.css" rel="stylesheet" />
+<link href="__PUBLIC__/css/common.css" rel="stylesheet" />
+<script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
+</head>
+<body>
+	<load file="./templates/default/header.html"/>
+
+<div id="main">
+		<div class='news'>
+			<foreach from="$news" value="$v">
+				<div class='newsList'>
+					<div class='newsImage'>
+						<a href="{$v.url}"><img src="__ROOT__/{$v.thumb}"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="{$v.url}">{$v.title}</a></h3>
+						<p>{$v.digest}</p>
+						<a href="{$v.url}" class='more'>更多>></a>
+					</div>
+				</div>
+			</foreach>
+			<div id='page'>
+				{$page}
+			</div>
+		</div>
+		<load file="./templates/default/side.html"/>
+	</div>
+
+	<load file="./templates/default/footer.html"/>
+</body>
+</html>

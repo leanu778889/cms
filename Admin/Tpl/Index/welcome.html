@@ -1,0 +1,51 @@
+<load file="__PUBLIC__/common/header.html"/>
+<body>
+<div id="window">
+	<div class='page_title'>
+		<strong>欢迎你：{$session.nickname}</strong>
+	</div>
+		<table class="table table-bordered">
+			<tr>
+				<th width="10%">名称</th>
+				<th width="80%">值</th>
+			</tr>
+			<tr>
+				<td>系统信息：</td>
+				<td>{$server.SERVER_SOFTWARE}</td>
+			</tr>
+			<tr>
+				<td>PHP版本：</td>
+				<td>{$hd.const.PHP_VERSION}</td>
+			</tr>
+			<tr>
+				<td>服务器IP：</td>
+				<td>{$server.SERVER_ADDR}</td>
+			</tr>
+			<tr>
+				<td>域名：</td>
+				<td>{$server.SERVER_NAME}</td>
+			</tr>
+			<tr>
+				<td>端口：</td>
+				<td>{$server.SERVER_PORT}</td>
+			</tr>
+			<tr>
+				<td>客户端信息：</td>
+				<td>{$server.HTTP_USER_AGENT}</td>
+			</tr>
+			<tr>
+				<td>客户端IP：</td>
+				<td>{$server.REMOTE_ADDR}</td>
+			</tr>
+			<tr>
+				<td>站点根路径：</td>
+				<td>{$hd.const.ROOT_PATH}</td>
+			</tr>
+			<tr>
+				<td>当前时间</td>
+				<td>{$server.REQUEST_TIME|date:'Y-m-d H:i:s',@@}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

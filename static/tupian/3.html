@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>图片</title>
+<meta name="keywords" content="图片关键字"/>
+<meta name="description" content="图片描述"/>
+<link href="http://localhost/cms/templates/default/Public/css/category.css" rel="stylesheet" />
+<link href="http://localhost/cms/templates/default/Public/css/common.css" rel="stylesheet" />
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/index.js"></script>
+</head>
+<body>
+	<script type='text/javascript' src='http://localhost/cms/hdphp/Extend/Org/Jquery/jquery-1.8.2.min.js'></script>
+<link href="http://localhost/cms/templates/default/Public/css/head.css" rel="stylesheet" />
+<script>
+	// 验证码初始地址
+	var codeSrc = 'http://localhost/cms/index.php/Index/User/showCode.html';
+</script>
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/head.js"></script>
+
+<!-- 遮挡层 -->
+<div id="cover"> </div>
+<!-- 登录框 -->
+<div id="loginBox" url="http://localhost/cms/index.php/Index/User/checkIsLogin.html" app="http://localhost/cms/index.php/Index">
+
+	<h3>登录 <a href="javascript:hideLoginBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="loginForm" action="http://localhost/cms/index.php/Index/User/login.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkLogin.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="lmust" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="lmust"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>没有账号,<a href="javascript:showRegBox();">去注册</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<!-- 注册框 -->
+<div id="regBox">
+	<h3>注册 <a href="javascript:hideRegBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="regForm" action="http://localhost/cms/index.php/Index/User/reg.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkReg.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="must" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>邮箱:</span>
+			<span class='input'><input class="must"  type="text" name="email"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input class="pass1"  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>确认密码:</span>
+			<span class='input'><input class="pass2"  type="password" name="password_d"/></span>
+		</li>
+		<li>
+			<span class='name'>昵称:</span>
+			<span class='input'><input class="must" type="text" name="nickname"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="must"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>已有账号,<a href="javascript:showLoginBox();">去登录</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<div id="top">
+		<div class='pos'>
+			<div class='user' id="user">
+				<img style="margin-top:10px;" id="loading" src="http://localhost/cms/templates/default/public/images/05043156.gif"/>
+			</div>
+			<div class='search'>
+				<form  action="http://localhost/cms/index.php/Index/Search/index.html" method="get">
+					<input class='keywords' type="text" name="keywords" />
+					<input class='submit' type="submit" value="" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<div class='logo'>
+
+		</div>
+		<div class='navigation'>
+			<a href="http://localhost/cms">首页</a>
+									<a href="http://localhost/cms/index.php/Index/List/index/cid/13.html">文字</a>
+							<a href="http://localhost/cms/static/yousheng">有声</a>
+							<a href="http://localhost/cms/static/tupian">图片</a>
+							<a href="http://localhost/cms/static/qushi">趣事</a>
+							<a href="http://localhost/cms/static/shipin">视频</a>
+					</div>
+	</div>
+
+<div id="main">
+		<div class='news'>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/tupian/article/201310/1571.html"><img src="http://localhost/cms/upload/96401386932886.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/tupian/article/201310/1571.html">有你的岁月，是阳光灿烂的季节。</a></h3>
+						<p>一个片段，一段温馨的回忆。一次相约，浪漫如七夕。美丽的文字托起一怀难以忘记的深情。你的爱，已飘飞，我的思念还在。回首中，有你的岁月，是阳光灿烂的季节。文章深情款</p>
+						<a href="http://localhost/cms/static/tupian/article/201310/1571.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/tupian/article/201310/1574.html"><img src="http://localhost/cms/upload/79861386932914.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/tupian/article/201310/1574.html">尽管再卑微，还是坚强了</a></h3>
+						<p>伸手触碰阳光，多好我不争未来，我只存现在。如果某天，我来这里，你问我，为什么要来这里，我会坚定的说，因为我当初在意的人在这里。你说；你已没有当初爱上我时的冲动了</p>
+						<a href="http://localhost/cms/static/tupian/article/201310/1574.html" class='more'>更多>></a>
+					</div>
+				</div>
+						<div id='page'>
+				<a href='http://localhost/cms/static/tupian/2.html' class='pre'>上一页</a><a href=http://localhost/cms/static/tupian/1.html>1</a><a href=http://localhost/cms/static/tupian/2.html>2</a><strong class='selfpage'>3</strong><span class='close'>下一页</span><span class='count'>[共3页] [22条记录]</span>			</div>
+		</div>
+		<div class='sidebar'>
+	<div class='item'>
+		<h2>标签</h2>
+		<div class='tagbox'>
+									<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/31">世界</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/32">奋斗</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/33">相见恨晚</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/34">我很好</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/29">十字架</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/35">悲哀</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/40">花非花</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/39">花朵</a>
+					</div>
+	</div>
+	<div class='item'>
+		<h2>友情链接</h2>
+		<ul class='flink'>
+									<li><a href="http://www.baidu.com">百度</a></li>
+							<li><a href="htttp:www.taobao.com">淘宝</a></li>
+							<li><a href="http://www.tmall.com">天猫</a></li>
+							<li><a href="http://www.sina.com.cn/">新浪</a></li>
+					</ul>
+	</div>
+	<div class='item'>
+		<h2>文章归档</h2>
+		<ul class='flink'>
+							<li style="height:auto;">
+					2012<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-3">2012-3<em>(3)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-4">2012-4<em>(5)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-5">2012-5<em>(4)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-10">2012-10<em>(6)</em></a>
+									</li>
+							<li style="height:auto;">
+					2013<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-9">2013-9<em>(2)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-10">2013-10<em>(312)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-11">2013-11<em>(1)</em></a>
+									</li>
+					</ul>
+	</div>
+</div>
+	</div>
+
+	<div id="footer">
+	<div class='bgbar'></div>
+	<div class='bottom'>
+		<div class='pos'>
+			<div class='footerNav'>
+													<a  target="_blank" href="http://www.houdunwang.com">后盾网</a>
+															<a  target="_blank" href="http://bbs.houdunwang.com">后盾网论坛</a>
+															<a  target="_blank" href="http://study.houdunwang.com">后盾网学习社区</a>
+															<a  target="_blank" href="http://vip.houdunwang.com">后盾网VIP</a>
+										</div>
+			<div class='copyright'>
+				© Copyright 2011-2013 www.houdunwang 			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

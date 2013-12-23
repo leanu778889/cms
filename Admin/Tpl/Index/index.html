@@ -1,0 +1,83 @@
+<load file="__PUBLIC__/common/header.html"/>
+<body style="overflow:hidden;">
+	<div id="header">
+		<a target="_blank" class='logo' href="__ROOT__"></a>
+		<ul class='topRight'>
+			<li>
+				<a target="_blank" href="{|U('__ROOT__/index.php/Index/index')}">网站首页</a>
+			</li>
+			<li>
+				<a target="_parent" href="{|U('Index/quit')}">退出</a>
+			</li>
+			<li>
+				欢迎你：<span>admin</span>
+			</li>
+		</ul>
+	</div>
+	<div id="main">
+		<div id="sideNav">
+			<foreach from='$nav' key="$k" value="$v">
+			<div class='item'>
+				<a class='name' href="javascript:void(0);">
+					<i class="{$v.ico} icon-white"></i>{$v.name}
+				</a>
+				<if value='is_array($v.subnav)'>
+				<ul class='subnav'>
+					<foreach from="$v.subnav"  value="$m">
+					<li>
+						<a  href="{$m.url}"><i class="icon-share-alt icon-white"></i>{$m.name}</a>
+					</li>
+					</foreach>
+				</ul>
+			</if>
+			</div>
+			</foreach>
+		</div>
+	<div id="iframeBox">
+			<iframe src="{|U('__CONTROL__/welcome')}"  name="content" frameborder=0 width="100%" height="100%"></iframe>
+	</div>
+
+</div>
+
+
+
+</body>
+<script type="text/javascript">
+setContentSize();
+/**
+ * 设置内容区域尺寸
+ */
+function setContentSize(){
+	var iH =  $(window).height()-30;
+	$('#mian').height(iH);
+	$('#sideNav').height(iH);
+	$('#iframeBox').height(iH);
+}
+/**
+ * 侧边导航切换
+ */
+(function sideNavChange(){
+	//导航收缩展开
+	$('#sideNav .item .name').toggle(function(){
+		//切换当前为选择状态
+		$(this).addClass('selected').find('i').removeClass('icon-white');
+		//显示子导航
+		$(this).parent().find('.subnav').show();
+		//切换字导航第一个为选择状态
+		$(this).parent().find('.subnav').find('li').removeClass('active').find('i').addClass('icon-white');
+		$(this).parent().find('.subnav').find('li').eq(0).addClass('active').find('i').removeClass('icon-white');
+	},function(){
+		//取消当前的选择状态
+		$(this).removeClass('selected').find('i').addClass('icon-white');;
+		//隐藏子导航
+		$(this).parent().find('.subnav').hide();
+	})
+	$('#sideNav .item .subnav li').click(function(){
+		//移除所有的选中状态
+		$('#sideNav .item .subnav li').removeClass('active').find('i').addClass('icon-white');
+		//切换当前为选中
+		$(this).addClass('active').find('i').removeClass('icon-white');
+	})
+})()
+</script>
+</html>

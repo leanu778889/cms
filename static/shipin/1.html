@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>视频</title>
+<meta name="keywords" content="视频关键字"/>
+<meta name="description" content="视频描述"/>
+<link href="http://localhost/cms/templates/default/Public/css/category.css" rel="stylesheet" />
+<link href="http://localhost/cms/templates/default/Public/css/common.css" rel="stylesheet" />
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/index.js"></script>
+</head>
+<body>
+	<script type='text/javascript' src='http://localhost/cms/hdphp/Extend/Org/Jquery/jquery-1.8.2.min.js'></script>
+<link href="http://localhost/cms/templates/default/Public/css/head.css" rel="stylesheet" />
+<script>
+	// 验证码初始地址
+	var codeSrc = 'http://localhost/cms/index.php/Index/User/showCode.html';
+</script>
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/head.js"></script>
+
+<!-- 遮挡层 -->
+<div id="cover"> </div>
+<!-- 登录框 -->
+<div id="loginBox" url="http://localhost/cms/index.php/Index/User/checkIsLogin.html" app="http://localhost/cms/index.php/Index">
+
+	<h3>登录 <a href="javascript:hideLoginBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="loginForm" action="http://localhost/cms/index.php/Index/User/login.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkLogin.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="lmust" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="lmust"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>没有账号,<a href="javascript:showRegBox();">去注册</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<!-- 注册框 -->
+<div id="regBox">
+	<h3>注册 <a href="javascript:hideRegBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="regForm" action="http://localhost/cms/index.php/Index/User/reg.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkReg.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="must" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>邮箱:</span>
+			<span class='input'><input class="must"  type="text" name="email"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input class="pass1"  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>确认密码:</span>
+			<span class='input'><input class="pass2"  type="password" name="password_d"/></span>
+		</li>
+		<li>
+			<span class='name'>昵称:</span>
+			<span class='input'><input class="must" type="text" name="nickname"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="must"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>已有账号,<a href="javascript:showLoginBox();">去登录</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<div id="top">
+		<div class='pos'>
+			<div class='user' id="user">
+				<img style="margin-top:10px;" id="loading" src="http://localhost/cms/templates/default/public/images/05043156.gif"/>
+			</div>
+			<div class='search'>
+				<form  action="http://localhost/cms/index.php/Index/Search/index.html" method="get">
+					<input class='keywords' type="text" name="keywords" />
+					<input class='submit' type="submit" value="" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<div class='logo'>
+
+		</div>
+		<div class='navigation'>
+			<a href="http://localhost/cms">首页</a>
+									<a href="http://localhost/cms/index.php/Index/List/index/cid/13.html">文字</a>
+							<a href="http://localhost/cms/static/yousheng">有声</a>
+							<a href="http://localhost/cms/static/tupian">图片</a>
+							<a href="http://localhost/cms/static/qushi">趣事</a>
+							<a href="http://localhost/cms/static/shipin">视频</a>
+					</div>
+	</div>
+
+<div id="main">
+		<div class='news'>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1822.html"><img src="http://localhost/cms/upload/68571386933160.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1822.html">充满着童趣的茶叶和咖啡的包装设计</a></h3>
+						<p>充满着童趣的包装设计，大多数作品是茶叶和咖啡的包装。卡通形象的介入，手绘元素与复古印刷的排版效果，以及大胆的撞色应用，让平淡传统的产品重新焕发了活力。是一组值得</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1822.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1820.html"><img src="http://localhost/cms/upload/98731386933073.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1820.html">太阳能窗口插座</a></h3>
+						<p>太阳能窗口插座（WindowSocket）由KyuhoSong和BoaOh设计，只要将插座贴在窗户上，利用太阳能，即可直接给插头设备供电。 </p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1820.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1816.html"><img src="http://localhost/cms/upload/72871386932961.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1816.html">盆栽树</a></h3>
+						<p>由DanielleTrofe设计的盆栽树（LiveScreen），是一个拥有自我灌溉系统的室内种植系统，它可以让人们在自己的家里面就能打造一个都市园艺。设计者在</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1816.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1813.html"><img src="http://localhost/cms/upload/26671386932901.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1813.html">复活节彩蛋装饰</a></h3>
+						<p>互联网上收集的一些创意的鸡蛋装饰，通过这些想法来带来灵感，更多创新的方式来装饰复活节彩蛋。第一眼就喜欢上了这些可爱的鸡蛋装饰。</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1813.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1810.html"><img src="http://localhost/cms/upload/50541386932851.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1810.html">橡皮擦理发师</a></h3>
+						<p>设计师ChenLuWei为台湾厂牌MegaWing打造的奇趣文具橡皮擦理发师（RubberBarber），方方正正的橡皮内藏着一张天然呆的脸，不过随着你的使用次</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1810.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1807.html"><img src="http://localhost/cms/upload/46671386933525.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1807.html">用线条创造出的微型雕塑</a></h3>
+						<p>这是一组由日本艺术家TakahiroIwasaki的微型雕塑作品，均以日常生活中常见的线条为元素进行创作，包括人的头发、毛巾上的线、牙刷的刷毛等，作品包括高压电</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1807.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1804.html"><img src="http://localhost/cms/upload/38361386933401.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1804.html">自营养花盆</a></h3>
+						<p>“crystalplanters”是旧金山设计师mariabujalska的作品。每个花盆都由一块工业毛毡制作，设计师将它缝合，制作成一个三维形体。之后，这种材</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1804.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1801.html"><img src="http://localhost/cms/upload/22981386933354.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1801.html">我只是简单哼唱你曾喜欢的歌</a></h3>
+						<p>就躺在操场上，然后静静地看天空，灰蒙蒙的，努力的寻找星星的光亮，寻找月亮的影子……可是，一无所获，才知道，原来夜晚也可能会阴天，就像微笑的人也可能会不开心。我看</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1801.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1798.html"><img src="http://localhost/cms/upload/68161386933313.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1798.html">亲爱的，你是怎么了</a></h3>
+						<p>有那么一刻，你会发现你跟身边的人交际变得越来越少，懒得解释太多；亲近的人不在身边，其他人似乎没有深交的必要，最多是见面点头打个招呼；无聊的时候就看看以前的状态说</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1798.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/shipin/article/201310/1795.html"><img src="http://localhost/cms/upload/92201386933225.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/shipin/article/201310/1795.html">如果你的人生可以重来</a></h3>
+						<p>如果你的人生可以重来，你一定不想认识我吧。是我，将你的人生搞得一团乱，因为不甘心一个人痛苦，不甘心就这样沉默地忍耐你的谎言，所以说了许多决绝的话，像个疯子一样，</p>
+						<a href="http://localhost/cms/static/shipin/article/201310/1795.html" class='more'>更多>></a>
+					</div>
+				</div>
+						<div id='page'>
+				<span class='close'>上一页</span><strong class='selfpage'>1</strong><a href=http://localhost/cms/static/shipin/2.html>2</a><a href=http://localhost/cms/static/shipin/3.html>3</a><a href=http://localhost/cms/static/shipin/4.html>4</a><a href=http://localhost/cms/static/shipin/5.html>5</a><a href='http://localhost/cms/static/shipin/2.html' class='next'>下一页</a><span class='count'>[共5页] [48条记录]</span>			</div>
+		</div>
+		<div class='sidebar'>
+	<div class='item'>
+		<h2>标签</h2>
+		<div class='tagbox'>
+									<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/31">世界</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/32">奋斗</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/33">相见恨晚</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/34">我很好</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/29">十字架</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/35">悲哀</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/40">花非花</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/39">花朵</a>
+					</div>
+	</div>
+	<div class='item'>
+		<h2>友情链接</h2>
+		<ul class='flink'>
+									<li><a href="http://www.baidu.com">百度</a></li>
+							<li><a href="htttp:www.taobao.com">淘宝</a></li>
+							<li><a href="http://www.tmall.com">天猫</a></li>
+							<li><a href="http://www.sina.com.cn/">新浪</a></li>
+					</ul>
+	</div>
+	<div class='item'>
+		<h2>文章归档</h2>
+		<ul class='flink'>
+							<li style="height:auto;">
+					2012<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-3">2012-3<em>(3)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-4">2012-4<em>(5)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-5">2012-5<em>(4)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-10">2012-10<em>(6)</em></a>
+									</li>
+							<li style="height:auto;">
+					2013<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-9">2013-9<em>(2)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-10">2013-10<em>(312)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-11">2013-11<em>(1)</em></a>
+									</li>
+					</ul>
+	</div>
+</div>
+	</div>
+
+	<div id="footer">
+	<div class='bgbar'></div>
+	<div class='bottom'>
+		<div class='pos'>
+			<div class='footerNav'>
+													<a  target="_blank" href="http://www.houdunwang.com">后盾网</a>
+															<a  target="_blank" href="http://bbs.houdunwang.com">后盾网论坛</a>
+															<a  target="_blank" href="http://study.houdunwang.com">后盾网学习社区</a>
+															<a  target="_blank" href="http://vip.houdunwang.com">后盾网VIP</a>
+										</div>
+			<div class='copyright'>
+				© Copyright 2011-2013 www.houdunwang 			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

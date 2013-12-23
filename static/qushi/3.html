@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>趣事</title>
+<meta name="keywords" content="趣事关键字"/>
+<meta name="description" content="趣事描述"/>
+<link href="http://localhost/cms/templates/default/Public/css/category.css" rel="stylesheet" />
+<link href="http://localhost/cms/templates/default/Public/css/common.css" rel="stylesheet" />
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/index.js"></script>
+</head>
+<body>
+	<script type='text/javascript' src='http://localhost/cms/hdphp/Extend/Org/Jquery/jquery-1.8.2.min.js'></script>
+<link href="http://localhost/cms/templates/default/Public/css/head.css" rel="stylesheet" />
+<script>
+	// 验证码初始地址
+	var codeSrc = 'http://localhost/cms/index.php/Index/User/showCode.html';
+</script>
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/head.js"></script>
+
+<!-- 遮挡层 -->
+<div id="cover"> </div>
+<!-- 登录框 -->
+<div id="loginBox" url="http://localhost/cms/index.php/Index/User/checkIsLogin.html" app="http://localhost/cms/index.php/Index">
+
+	<h3>登录 <a href="javascript:hideLoginBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="loginForm" action="http://localhost/cms/index.php/Index/User/login.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkLogin.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="lmust" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="lmust"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>没有账号,<a href="javascript:showRegBox();">去注册</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<!-- 注册框 -->
+<div id="regBox">
+	<h3>注册 <a href="javascript:hideRegBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="regForm" action="http://localhost/cms/index.php/Index/User/reg.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkReg.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="must" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>邮箱:</span>
+			<span class='input'><input class="must"  type="text" name="email"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input class="pass1"  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>确认密码:</span>
+			<span class='input'><input class="pass2"  type="password" name="password_d"/></span>
+		</li>
+		<li>
+			<span class='name'>昵称:</span>
+			<span class='input'><input class="must" type="text" name="nickname"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="must"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>已有账号,<a href="javascript:showLoginBox();">去登录</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<div id="top">
+		<div class='pos'>
+			<div class='user' id="user">
+				<img style="margin-top:10px;" id="loading" src="http://localhost/cms/templates/default/public/images/05043156.gif"/>
+			</div>
+			<div class='search'>
+				<form  action="http://localhost/cms/index.php/Index/Search/index.html" method="get">
+					<input class='keywords' type="text" name="keywords" />
+					<input class='submit' type="submit" value="" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<div class='logo'>
+
+		</div>
+		<div class='navigation'>
+			<a href="http://localhost/cms">首页</a>
+									<a href="http://localhost/cms/index.php/Index/List/index/cid/13.html">文字</a>
+							<a href="http://localhost/cms/static/yousheng">有声</a>
+							<a href="http://localhost/cms/static/tupian">图片</a>
+							<a href="http://localhost/cms/static/qushi">趣事</a>
+							<a href="http://localhost/cms/static/shipin">视频</a>
+					</div>
+	</div>
+
+<div id="main">
+		<div class='news'>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1643.html"><img src="http://localhost/cms/upload/25561386933208.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1643.html">一封情书</a></h3>
+						<p>偶然间，不经意的遇见了这样一个女孩，她看起来很清秀，内心却有着类似女汉子的性格，第一次见到她时，你可能会觉得她很柔弱，可是她比任何一个男生都要坚强，她一直都想做</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1643.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1640.html"><img src="http://localhost/cms/upload/98731386933073.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1640.html">青春的散场，不能握的手，却比爱人更长久</a></h3>
+						<p>不知道为什么有那么多的文章、那么多的歌曲来描绘爱情，太多的版本总透露着文艺范儿，似乎爱情成为我们谈论的主题，而亲情、友情却被我们淡忘在流年中，今天我却也想以一种</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1640.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1638.html"><img src="http://localhost/cms/upload/67111386933022.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1638.html">顽石点头</a></h3>
+						<p>天气并不是很好，坐在高高的长城上头我盘起腿，看着云海弥漫人来人往。风灌过的时候，思绪像经幡一样涌动，猎猎作响。路人视我如傻逼的神情让我精神抖擞，愈发傲娇。我木木</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1638.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1636.html"><img src="http://localhost/cms/upload/79911386932989.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1636.html">那年春天</a></h3>
+						<p>那年春天，我整天里沉默，也不知道自己是为什么？睡不好觉，吃不下饭，那年春天是第一次爱情的天。记得那年春天，我遇到了一个男孩，他会写诗画画，说起话来，很深刻，他善</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1636.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1633.html"><img src="http://localhost/cms/upload/79861386932914.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1633.html">他一定会找到你</a></h3>
+						<p>每年回家大家都跟媒婆上身一样特别挂念我的个人问题多年没消息的中学同学在校内上特别犀利的悄悄话问说这是你男朋友么我表妹一个劲的认为所有和我合照的雄性都是我男友还表</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1633.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1631.html"><img src="http://localhost/cms/upload/96401386932886.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1631.html">我在上海南，与日出同行</a></h3>
+						<p>那时突然想到一句话，很适合姑苏：历史恢宏，容颜温柔。仅仅是在需要转车的上海南站候车厅，就感到了浓厚的人文气息。不知是心之所向还是夸大其词；不知是崇拜还是谄媚，心</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1631.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1628.html"><img src="http://localhost/cms/upload/53781386932824.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1628.html">想你时，我朝着哪一个方向</a></h3>
+						<p>彩灯已高高挂起，离春节愈来愈近，而我为什么感觉不到一丝丝节日的气息，难道我真的累了么？是身体的疲惫，或是身心的憔悴？傻傻地望着窗外，望着月亮，淡淡的忧伤掠起淡淡</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1628.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1627.html"><img src="http://localhost/cms/upload/15651386933541.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1627.html">有没有那么一天，我们再次狼狈的撞一起。</a></h3>
+						<p>如果有一天，我们再见面，时间会不会倒退一点。————如果有一天［你若有一分暗示，我便有十分勇敢］这句话让我觉得暧昧。是的，暧昧。曾经琢磨过暧昧的意思，即是若即若</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1627.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1624.html"><img src="http://localhost/cms/upload/91861386933442.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1624.html">中秋</a></h3>
+						<p>千古中秋悲明月，一袭相思话团圆。又逢中秋，这个中华传统的佳节，从风云的唐宋至烟雨的明清，一直流转到繁盛的今日。那一轮清清朗朗的明月，从远古到今朝，圆了又缺，缺了</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1624.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/qushi/article/201310/1622.html"><img src="http://localhost/cms/upload/53301386933383.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/qushi/article/201310/1622.html">明日天地，只恐怕认不出自己</a></h3>
+						<p>［我若无心谁有意］到这里竟然微微的有些叹息起来，我若是无心的话，又怎么企求别人对你有意呢？人自私，怕疼。怕付出，想得到。我会好好爱，深深爱，爱过这回，便不再爱。</p>
+						<a href="http://localhost/cms/static/qushi/article/201310/1622.html" class='more'>更多>></a>
+					</div>
+				</div>
+						<div id='page'>
+				<a href='http://localhost/cms/static/qushi/2.html' class='pre'>上一页</a><a href=http://localhost/cms/static/qushi/1.html>1</a><a href=http://localhost/cms/static/qushi/2.html>2</a><strong class='selfpage'>3</strong><a href=http://localhost/cms/static/qushi/4.html>4</a><a href=http://localhost/cms/static/qushi/5.html>5</a><a href='http://localhost/cms/static/qushi/4.html' class='next'>下一页</a><span class='count'>[共5页] [42条记录]</span>			</div>
+		</div>
+		<div class='sidebar'>
+	<div class='item'>
+		<h2>标签</h2>
+		<div class='tagbox'>
+									<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/31">世界</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/32">奋斗</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/33">相见恨晚</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/34">我很好</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/29">十字架</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/35">悲哀</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/40">花非花</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/39">花朵</a>
+					</div>
+	</div>
+	<div class='item'>
+		<h2>友情链接</h2>
+		<ul class='flink'>
+									<li><a href="http://www.baidu.com">百度</a></li>
+							<li><a href="htttp:www.taobao.com">淘宝</a></li>
+							<li><a href="http://www.tmall.com">天猫</a></li>
+							<li><a href="http://www.sina.com.cn/">新浪</a></li>
+					</ul>
+	</div>
+	<div class='item'>
+		<h2>文章归档</h2>
+		<ul class='flink'>
+							<li style="height:auto;">
+					2012<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-3">2012-3<em>(3)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-4">2012-4<em>(5)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-5">2012-5<em>(4)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-10">2012-10<em>(6)</em></a>
+									</li>
+							<li style="height:auto;">
+					2013<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-9">2013-9<em>(2)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-10">2013-10<em>(312)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-11">2013-11<em>(1)</em></a>
+									</li>
+					</ul>
+	</div>
+</div>
+	</div>
+
+	<div id="footer">
+	<div class='bgbar'></div>
+	<div class='bottom'>
+		<div class='pos'>
+			<div class='footerNav'>
+													<a  target="_blank" href="http://www.houdunwang.com">后盾网</a>
+															<a  target="_blank" href="http://bbs.houdunwang.com">后盾网论坛</a>
+															<a  target="_blank" href="http://study.houdunwang.com">后盾网学习社区</a>
+															<a  target="_blank" href="http://vip.houdunwang.com">后盾网VIP</a>
+										</div>
+			<div class='copyright'>
+				© Copyright 2011-2013 www.houdunwang 			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

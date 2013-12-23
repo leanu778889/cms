@@ -1,0 +1,36 @@
+<load file="__PUBLIC__/common/header.html">
+<body>
+<div id="window">
+	<div class='page_title'>
+		<strong>友情链接列表</strong>
+	</div>
+			<table class="table table-bordered" id="table">
+				<thead>
+					<tr>
+						<th width='12%'>名称</th>
+						<th width='12%'>LOGO</th>
+						<th>链接地址</th>
+						<th width='18%'>链接描述</th>
+						<th width='8%'>是否显示</th>
+						<th width='20%'>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach from="$data" value="$v">
+						<tr>
+							<td>{$v.fname}</td>
+							<td><img src="__ROOT__/{$v.logo}"/></td>
+							<td>{$v.url}</td>
+							<td>{$v.msg}</td>
+							<td><if value="{$v.isshow}">是<else>否</if></td>
+							<td>
+								<a href="{|U('Flink/edit')}/fid/{$v.fid}" class="btn btn-small">编辑</a>
+								<a href="{|U('Flink/del')}/fid/{$v.fid}" class="btn btn-small delAffirm">删除</a>
+							</td>
+						</tr>
+					</foreach>
+				</tbody>
+			</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<load file="__PUBLIC__/common/header.html">
+<hdui/>
+<body>
+<div id="window">
+	<div class='page_title'>
+		<strong>添加友情链接</strong>
+	</div>
+		<form action="__METH__"  method="post">
+			<table class="table table-bordered">
+
+				<tr>
+					<td>友情链接名</td>
+					<td><input type="text" name='fname'></td>
+				</tr>
+				<tr>
+					<td>链接地址</td>
+					<td><input type='text' name='url'/></td>
+				</tr>
+				<tr>
+					<td>描述</td>
+					<td><textarea name='msg'></textarea></td>
+				</tr>
+				<tr>
+					<td>LOGO</td>
+					<td><upload name='file' limit=1/></td>
+				</tr>
+
+				<tr>
+					<td>排序</td>
+					<td><input type="text" name='sort'></td>
+				</tr>
+				<tr>
+					<td>是否显示</td>
+					<td>
+						<label>是
+						<input type="radio" name='isshow' checked='true' value=1>
+						</label>
+						<label>否
+						<input type="radio" name='isshow' value=0>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" class="btn" value="提交"></td>
+				</tr>
+			</table>
+		</form>
+</div>
+</body>
+</html>

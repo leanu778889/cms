@@ -1,0 +1,19 @@
+<div id="footer">
+	<div class='bgbar'></div>
+	<div class='bottom'>
+		<div class='pos'>
+			<div class='footerNav'>
+			<navigation	site="3" name="v">
+				<if value="$v['opennew']">
+				<a  target="_blank" href="{$v.url}">{$v.name}</a>
+				<else>
+				<a  href="{$v.url}">{$v.name}</a>
+				</if>
+			</navigation>
+			</div>
+			<div class='copyright'>
+				© Copyright 2011-2013 www.houdunwang {$header.copy}
+			</div>
+		</div>
+	</div>
+</div>

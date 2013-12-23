@@ -1,0 +1,26 @@
+<load file="__PUBLIC__/common/header.html">
+<body>
+<div id="window">
+	<div class='page_title'>
+		<strong>标签列表</strong>
+	</div>
+			<table class="table table-bordered" style="width:400px;">
+				<tr>
+					<th>id</th>
+					<th>标签名</th>
+					<th>操作</th>
+				</tr>
+				<foreach from="$data" value="$v">
+					<tr>
+						<td>{$v.tid}</td>
+						<td>{$v.tagname}</td>
+						<td>
+							<a class='btn' href="{|U('Tag/edit')}/tid/{$v.tid}">修改</a>
+							<a class='btn delAffirm' href="{|U('Tag/del')}/tid/{$v.tid}">删除</a>
+						</td>
+					</tr>
+				</foreach>
+			</table>
+</div>
+</body>
+</html>

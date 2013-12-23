@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>有声</title>
+<meta name="keywords" content="有声关键字"/>
+<meta name="description" content="有声描述"/>
+<link href="http://localhost/cms/templates/default/Public/css/category.css" rel="stylesheet" />
+<link href="http://localhost/cms/templates/default/Public/css/common.css" rel="stylesheet" />
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/index.js"></script>
+</head>
+<body>
+	<script type='text/javascript' src='http://localhost/cms/hdphp/Extend/Org/Jquery/jquery-1.8.2.min.js'></script>
+<link href="http://localhost/cms/templates/default/Public/css/head.css" rel="stylesheet" />
+<script>
+	// 验证码初始地址
+	var codeSrc = 'http://localhost/cms/index.php/Index/User/showCode.html';
+</script>
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/head.js"></script>
+
+<!-- 遮挡层 -->
+<div id="cover"> </div>
+<!-- 登录框 -->
+<div id="loginBox" url="http://localhost/cms/index.php/Index/User/checkIsLogin.html" app="http://localhost/cms/index.php/Index">
+
+	<h3>登录 <a href="javascript:hideLoginBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="loginForm" action="http://localhost/cms/index.php/Index/User/login.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkLogin.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="lmust" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="lmust"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>没有账号,<a href="javascript:showRegBox();">去注册</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<!-- 注册框 -->
+<div id="regBox">
+	<h3>注册 <a href="javascript:hideRegBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="regForm" action="http://localhost/cms/index.php/Index/User/reg.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkReg.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="must" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>邮箱:</span>
+			<span class='input'><input class="must"  type="text" name="email"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input class="pass1"  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>确认密码:</span>
+			<span class='input'><input class="pass2"  type="password" name="password_d"/></span>
+		</li>
+		<li>
+			<span class='name'>昵称:</span>
+			<span class='input'><input class="must" type="text" name="nickname"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="must"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>已有账号,<a href="javascript:showLoginBox();">去登录</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<div id="top">
+		<div class='pos'>
+			<div class='user' id="user">
+				<img style="margin-top:10px;" id="loading" src="http://localhost/cms/templates/default/public/images/05043156.gif"/>
+			</div>
+			<div class='search'>
+				<form  action="http://localhost/cms/index.php/Index/Search/index.html" method="get">
+					<input class='keywords' type="text" name="keywords" />
+					<input class='submit' type="submit" value="" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<div class='logo'>
+
+		</div>
+		<div class='navigation'>
+			<a href="http://localhost/cms">首页</a>
+									<a href="http://localhost/cms/index.php/Index/List/index/cid/13.html">文字</a>
+							<a href="http://localhost/cms/static/yousheng">有声</a>
+							<a href="http://localhost/cms/static/tupian">图片</a>
+							<a href="http://localhost/cms/static/qushi">趣事</a>
+							<a href="http://localhost/cms/static/shipin">视频</a>
+					</div>
+	</div>
+
+<div id="main">
+		<div class='news'>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1856.html"><img src="http://localhost/cms/upload/27401386933510.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1856.html">不变的，只是岁月的流逝</a></h3>
+						<p>梦境，虽美，却只是梦而已。现实中的我们，只能静看，岁月苍老。曾经以为，一切都不会变。后来才发现，是自己太过天真了。这世上，又有什么是永恒不变的呢？如果它流动，它</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1856.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1853.html"><img src="http://localhost/cms/upload/53301386933383.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1853.html">不属于自己的就忘掉吧，不要留恋</a></h3>
+						<p>有时候执着是一种负担，放弃是一种解脱，人没有完美，幸福没有一百分，知道自己没有能力一次拥有那么多，也没有权力要求那么多，否则苦了自己，也为难了对方。一颗心属于一</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1853.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1850.html"><img src="http://localhost/cms/upload/83621386933340.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1850.html">她的前世是河畔的韧草 孤独地生长在芦苇丛中</a></h3>
+						<p>巨大的孤独坐在房间的沙发上和你面面相觑它也许会温柔的问你最近好么其实也就那样还不错还过得去不太好很糟糕问题无关乎答案沉默是停顿的无声电影幕布上悬挂时光的年轮错综</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1850.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1847.html"><img src="http://localhost/cms/upload/46671386933525.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1847.html">❀ 能不能给我一剂良药</a></h3>
+						<p>能不能给我一剂良药治治那些心里的长久的不被轻易发觉的正在内部发酵的病症状是在某些瞬间我想哭泣在阳光下行走却感到寒冷在某些瞬间我想抓狂但还是维持了应有的成熟和体面</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1847.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1844.html"><img src="http://localhost/cms/upload/38361386933401.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1844.html">暖暖</a></h3>
+						<p>因为他喜欢她的歌于是我的生活里也开始响彻她的声音从没什么感觉到觉得有点味道到现在的很喜欢如果说原来是因为爱屋及乌那现在是自己真的慢慢喜欢上了她她的声音一直伴着我</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1844.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1842.html"><img src="http://localhost/cms/upload/78891386933370.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1842.html">何必要那么多的借口</a></h3>
+						<p>何必要那么多的借口让我内疚自己还爱的不够—-题记那时候喜欢《预谋》这歌。当时我戴上耳麦单曲循环了七个小时，那种耳朵的生疼也仍记忆犹新。我并不是什么追</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1842.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1839.html"><img src="http://localhost/cms/upload/95021386933329.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1839.html">一个拇指带来的艺术创意呢</a></h3>
+						<p>我们总是会说或者会被别人教导道——创意来自生活。很多人就这样一次又一次的听着这句话，听到最后也没有真正去理解这句话的深刻意义，而是变得麻木和无意义。你要知道的是</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1839.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1836.html"><img src="http://localhost/cms/upload/27401386933510.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1836.html">集装箱里的星巴克</a></h3>
+						<p>星巴克把自己定位为极品咖啡中的翘楚，星巴克希望消费者可以体验极品咖啡的浓郁、浪漫以及奢侈品一样的品质，所以它的价格一般较高昂服务的人群一般都集中在大城市的闹市地</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1836.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1834.html"><img src="http://localhost/cms/upload/38361386933401.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1834.html">独特的软质插座</a></h3>
+						<p>在平常使用拖线板插座的时候，插头很多的情况下，因为拖线的方向不同，导致插头偏向各个方向，这样长期下来很容易损害电器的插头。这个方案是一个塑胶的拖线板，它可以分别</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1834.html" class='more'>更多>></a>
+					</div>
+				</div>
+							<div class='newsList'>
+					<div class='newsImage'>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1832.html"><img src="http://localhost/cms/upload/78891386933370.jpeg"/></a>
+					</div>
+					<div class='newsContent'>
+						<h3><a href="http://localhost/cms/static/yousheng/article/201310/1832.html">小人国的世界</a></h3>
+						<p>小人国的世界一组超现实微型概念摄影的唯美图片，其实类似于这样的创意摄影作品很多，但是这种组作品的风格相对真实而唯美，突然间感觉世界变的很大，很空，不会像现实世界</p>
+						<a href="http://localhost/cms/static/yousheng/article/201310/1832.html" class='more'>更多>></a>
+					</div>
+				</div>
+						<div id='page'>
+				<span class='close'>上一页</span><strong class='selfpage'>1</strong><a href=http://localhost/cms/static/yousheng/2.html>2</a><a href='http://localhost/cms/static/yousheng/2.html' class='next'>下一页</a><span class='count'>[共2页] [16条记录]</span>			</div>
+		</div>
+		<div class='sidebar'>
+	<div class='item'>
+		<h2>标签</h2>
+		<div class='tagbox'>
+									<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/31">世界</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/32">奋斗</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/33">相见恨晚</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/34">我很好</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/29">十字架</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/35">悲哀</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/40">花非花</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/39">花朵</a>
+					</div>
+	</div>
+	<div class='item'>
+		<h2>友情链接</h2>
+		<ul class='flink'>
+									<li><a href="http://www.baidu.com">百度</a></li>
+							<li><a href="htttp:www.taobao.com">淘宝</a></li>
+							<li><a href="http://www.tmall.com">天猫</a></li>
+							<li><a href="http://www.sina.com.cn/">新浪</a></li>
+					</ul>
+	</div>
+	<div class='item'>
+		<h2>文章归档</h2>
+		<ul class='flink'>
+							<li style="height:auto;">
+					2012<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-3">2012-3<em>(3)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-4">2012-4<em>(5)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-5">2012-5<em>(4)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-10">2012-10<em>(6)</em></a>
+									</li>
+							<li style="height:auto;">
+					2013<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-9">2013-9<em>(2)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-10">2013-10<em>(312)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-11">2013-11<em>(1)</em></a>
+									</li>
+					</ul>
+	</div>
+</div>
+	</div>
+
+	<div id="footer">
+	<div class='bgbar'></div>
+	<div class='bottom'>
+		<div class='pos'>
+			<div class='footerNav'>
+													<a  target="_blank" href="http://www.houdunwang.com">后盾网</a>
+															<a  target="_blank" href="http://bbs.houdunwang.com">后盾网论坛</a>
+															<a  target="_blank" href="http://study.houdunwang.com">后盾网学习社区</a>
+															<a  target="_blank" href="http://vip.houdunwang.com">后盾网VIP</a>
+										</div>
+			<div class='copyright'>
+				© Copyright 2011-2013 www.houdunwang 			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

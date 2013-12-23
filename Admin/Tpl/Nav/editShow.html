@@ -1,0 +1,113 @@
+<load file="__PUBLIC__/common/header.html">
+<body>
+<div id="window">
+	<div class='page_title'>
+		<strong>编辑导航</strong>
+	</div>
+	<div class='content'>
+	<form id="form" action="{|U('Nav/edit')}/nid/{$nav.nid}" method="post">
+		<table class='table'>
+			<thead>
+				<tr>
+					<th width="10%">标题</th>
+					<th width="50%">内容</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td>导航名称</td>
+					<td><input type="text" name="name" value="{$nav.name}"></td>
+				</tr>
+				<tr>
+					<td>导航URL</td>
+					<td>
+						<input type="text" name="url" value="{$nav.url}">
+						<span>说明：{__ROOT__}根地址,也可以根据{U('Index/index')}函数生成地址</span>
+					</td>
+				</tr>
+				<tr>
+					<td>是否新窗口</td>
+					<td>
+						<if value="$nav.opennew">
+						<label style="float:left;margin-right:10px;">
+							是:
+							<input type="radio" name="opennew" value=1 checked="checked">
+						</label>
+						<lable style="float:left;">
+							否:
+							<input type="radio" name="opennew" value=0>
+						</lable>
+						<else>
+						<label style="float:left;margin-right:10px;">
+							是:
+							<input type="radio" name="opennew" value=1 >
+						</label>
+						<lable style="float:left;">
+							否:
+							<input type="radio" name="opennew" value=0 checked="checked">
+						</lable>
+						</if>
+					</td>
+				</tr>
+				<tr>
+					<td>是否显示</td>
+					<td>
+						<if value="$nav.isshow">
+						<label style="float:left;margin-right:10px;">
+							是:
+							<input type="radio" name="isshow" value=1 checked="checked">
+						</label>
+						<lable style="float:left;">
+							否:
+							<input type="radio" name="isshow" value=0>
+						</lable>
+						<else>
+						<label style="float:left;margin-right:10px;">
+							是:
+							<input type="radio" name="isshow" value=1 >
+						</label>
+						<lable style="float:left;">
+							否:
+							<input type="radio" name="isshow" value=0 checked="checked">
+						</lable>
+						</if>
+					</td>
+				</tr>
+				<tr>
+					<td>排序</td>
+					<td><input type="text" style="width:60px;" name="sort" value="{$nav['sort']}"></td>
+				</tr>
+				<tr>
+					<td>显示位置</td>
+					<td>
+						<select name='site'>
+							<if value="$nav['site'] eq 1">
+								<option selected="selected" value=1>头部导航</option>
+								<option value=2>中间导航</option>
+								<option value=3>底部导航</option>
+							</if>
+							<if value="$nav['site'] eq 2">
+								<option  value=1>头部导航</option>
+								<option selected="selected" value=2>中间导航</option>
+								<option value=3>底部导航</option>
+							</if>
+							<if value="$nav['site'] eq 3">
+								<option  value=1>头部导航</option>
+								<option value=2>中间导航</option>
+								<option selected="selected" value=3>底部导航</option>
+							</if>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input class='btn' type="submit" value="修改导航" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+	</div>
+</div>
+</body>
+</html>

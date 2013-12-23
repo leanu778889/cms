@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>带我走。</title>
+<meta name="keywords" content="生命的美丽"/>
+<meta name="description" content="生命的美丽，永远展现在她的进取之中；就像大树的美丽，是展现在它负势向上高耸入云的蓬勃生机中；像雄鹰的美丽，是展现在它搏风击雨如苍天之魂的翱翔中；像江河的美丽，是展现在它波涛汹涌一泻千里的奔流中。"/>
+<link href="http://localhost/cms/templates/default/Public/css/details.css" rel="stylesheet" />
+<link href="http://localhost/cms/templates/default/Public/css/common.css" rel="stylesheet" />
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/index.js"></script>
+</head>
+<body>
+	<script type='text/javascript' src='http://localhost/cms/hdphp/Extend/Org/Jquery/jquery-1.8.2.min.js'></script>
+<link href="http://localhost/cms/templates/default/Public/css/head.css" rel="stylesheet" />
+<script>
+	// 验证码初始地址
+	var codeSrc = 'http://localhost/cms/index.php/Index/User/showCode.html';
+</script>
+<script type="text/javascript" src="http://localhost/cms/templates/default/Public/js/head.js"></script>
+
+<!-- 遮挡层 -->
+<div id="cover"> </div>
+<!-- 登录框 -->
+<div id="loginBox" url="http://localhost/cms/index.php/Index/User/checkIsLogin.html" app="http://localhost/cms/index.php/Index">
+
+	<h3>登录 <a href="javascript:hideLoginBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="loginForm" action="http://localhost/cms/index.php/Index/User/login.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkLogin.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="lmust" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="lmust"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>没有账号,<a href="javascript:showRegBox();">去注册</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<!-- 注册框 -->
+<div id="regBox">
+	<h3>注册 <a href="javascript:hideRegBox();" class='close'></a></h3>
+	<div class='error'>
+
+	</div>
+	<form id="regForm" action="http://localhost/cms/index.php/Index/User/reg.html" method="post" checkUrl="http://localhost/cms/index.php/Index/User/checkReg.html">
+	<ul>
+		<li>
+			<span class='name'>用户名:</span>
+			<span class='input'><input class="must" type="text" name="username"/></span>
+		</li>
+		<li>
+			<span class='name'>邮箱:</span>
+			<span class='input'><input class="must"  type="text" name="email"/></span>
+		</li>
+		<li>
+			<span class='name'>密码:</span>
+			<span class='input'><input class="pass1"  type="password" name="password"/></span>
+		</li>
+		<li>
+			<span class='name'>确认密码:</span>
+			<span class='input'><input class="pass2"  type="password" name="password_d"/></span>
+		</li>
+		<li>
+			<span class='name'>昵称:</span>
+			<span class='input'><input class="must" type="text" name="nickname"/></span>
+		</li>
+		<li>
+			<span class='name'>验证码:</span>
+			<span class='input inputcode'><input class="must"  class='must' type="text" name="code"/></span>
+			<span class='code'><img width="100" onclick="this.src = codeSrc+'?'+Math.random();" src="http://localhost/cms/index.php/Index/User/showCode.html"/></span>
+		</li>
+		<li>
+			<span class='name'></span>
+			<span class='input inputsubmit'><input type="submit" name="username" value="提交"/></span>
+			<span class='goreg'>已有账号,<a href="javascript:showLoginBox();">去登录</a></span>
+		</li>
+	</ul>
+	</form>
+</div>
+<div id="top">
+		<div class='pos'>
+			<div class='user' id="user">
+				<img style="margin-top:10px;" id="loading" src="http://localhost/cms/templates/default/public/images/05043156.gif"/>
+			</div>
+			<div class='search'>
+				<form  action="http://localhost/cms/index.php/Index/Search/index.html" method="get">
+					<input class='keywords' type="text" name="keywords" />
+					<input class='submit' type="submit" value="" />
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<div class='logo'>
+
+		</div>
+		<div class='navigation'>
+			<a href="http://localhost/cms">首页</a>
+									<a href="http://localhost/cms/index.php/Index/List/index/cid/13.html">文字</a>
+							<a href="http://localhost/cms/static/yousheng">有声</a>
+							<a href="http://localhost/cms/static/tupian">图片</a>
+							<a href="http://localhost/cms/static/qushi">趣事</a>
+							<a href="http://localhost/cms/static/shipin">视频</a>
+					</div>
+	</div>
+
+
+
+		<div id="main">
+
+			<div class='details'>
+				<h1></h1>
+				<div class='info'>
+					<div class='base'>
+						<em>发表于2013-10-19 21:46:10</em>, 作者:<span>admin888</span>, 分类：<strong><a href="http://localhost/cms/static/tupian">图片</a></strong>
+					</div>
+					<div class='tag'>
+						点击数:<span id="click" url="http://localhost/cms/index.php/Index/Detail/showClick.html/id/1572">502</span>
+					</div>
+				</div>
+				<div class='content'>
+					<p>
+	<br />
+	<div class="post-image">
+		<img src="http://www.fqpai.com/wp-content/themes/fqp-three/includes/timthumb.php?src=/wp-content/uploads/2013/11/10591.jpg&h=300&w=630&zc=1&q=100" alt="恋爱趣味动画《温蒂酱炊事锅的爱情故事》" /> 
+	</div>
+	<p>
+		你会因为什么而恋爱，又因为什么而结婚呢？<br />
+<span id="more-238468"></span><br />
+一部温暖有爱的动画，讲述“闷骚男”如何追到海归“白富美”的恋爱故事。
+	</p>
+	<p>
+		这是属于温蒂酱&amp;炊事锅的爱情故事，属于他们的甜蜜缱绻。短片用知性的配音和漫画式的字幕，将动画处理得轻松有趣，而真实的恋爱故事娓娓道来间，一种感动也慢慢涌上心头。
+	</p>
+	<p>
+		结婚，就该有个精致文艺的爱情故事短片。这段原创手绘的动画短片把新人的爱情故事描绘得活灵活现、生动幽默，又带有人情味。
+	</p>
+<embed src="http://player.ku6.com/refer/PGxWHN0hZOcpmuZ3Cx-_TA../v.swf" type="application/x-shockwave-flash" width="550" height="400" quality="high" />
+</p>
+<p>
+	<a href="http://www.fqpai.com/wp-content/uploads/2013/10/122.jpg"><img src="http://www.fqpai.com/wp-content/uploads/2013/10/122.jpg" data-lazy-type="image" data-lazy-src="http://www.fqpai.com/wp-content/uploads/2013/10/122.jpg" alt="1" class="lazy lazy-hidden alignright size-full wp-image-236138" height="333" width="247" /></a>
+</p>
+<noscript>
+	<a href="http://www.fqpai.com/wp-content/uploads/2013/10/122.jpg"><img src="http://www.fqpai.com/wp-content/uploads/2013/10/122.jpg" alt="1" width="247" height="333" class="alignright size-full wp-image-236138" /></a>
+</noscript>
+单曲循环着那一首我们都共同哼唱过的歌曲，每当听到这首歌，我都会想起你在我身边的那些日子。风吹在我的脸颊上，冰冷的不像话。我却享受着这一刻的美妙。是因为想念的缘故么。漫步在熙熙攘攘的的街头，华灯初放的没有目的找寻着些什么，却发了疯一样的去找寻你，拼命的用尽了身上所有的力气。
+<p>
+	<br />
+</p>
+<p>
+	是在找寻我遗落的爱情么。还是在找寻我早已失去的温度呢？
+</p>
+<p>
+	找一个角落，蜷缩着疲惫不堪的身子，点燃一跟520的女烟，淡淡的薄荷香，用我纤细修长的的手指夹住着它，嘴里吐出一圈圈的烟圈，看着它们在我的眼前随风飘散着，不复存在的。淡淡的烟草味，能够暂时放下我的思念。不复存在的曾经，早已变成尘埃了，地下的泥土若泉下有知，又是否会记得，那些我们曾深深相爱的日子呢。
+</p>
+<p>
+	从什么时候开始，烟成为了陪伴我度过最难熬的日子的东西。记得我曾对你承诺过，我会戒掉烟的。我也以为我能够做得到，很多时候，当骨子里的落寞找不到方式去发泄的时候，烟会是最好的方式。
+</p>
+<p>
+	也许，你曾经和我说的是对的，我在爱情的战局里，不过是个孩子，不懂世俗的孩子，缺爱的孩子，恰碰着你愿意温暖着我弱小的心灵而已。记得当你抱着我的时候，亲吻着我额头的时候，我是会潸然泪下，热泪盈眶。你总说，你真的只是个孩子。
+</p>
+<p>
+	孩子气是一种气质，我多愿意让自己变得成熟，就算只有一点也好。只要你能够看到过我改变的样子，我就心满意足了。<br />
+我在不断的改变着自己，只是待我改变时，你却去离我而去了。
+</p>
+<div class="box">
+	<h4>
+	</h4>
+	<p style="text-align:center;">
+		<span style="color:#ff0000;">君生我未生。我生君已老。</span><br />
+<!-- ProPlayer by Isa Goksu -->
+	</p>
+	<div name="mediaspace" id="mediaspace">
+		<div class="pro-player-container" width="570px" height="390px">
+			<div id="pro-player-236105pp-single-52628e78f1bdb">
+			</div>
+		</div>
+	</div>
+</div>				</div>
+				<div id="comment" url="http://localhost/cms/index.php/Index/Detail/listComment.html/news_id/1572">
+					<div class="showComment">
+						<img style="margin-top:10px;" class="commentLoading" src="http://localhost/cms/templates/default/public/images/05043156.gif"/>
+					</div>
+					<div class='isLogin' style="display:none;">
+						<form id="commentForm" action="http://localhost/cms/index.php/Index/Detail/addComment.html" method="post">
+							<input type="hidden" class="uid" name="uid" value=""/>
+							<input type="hidden" class="nickname" name="nickname" value=""/>
+							<input type="hidden" name="news_id" value="1572"/>
+							<textarea class="content" name="content"></textarea>
+							<input type="submit" class="submit" value='提交'/>
+						</form>
+					</div>
+					<div class='notLogin' style="display:none;">
+						请先 <a href="javascript:showLoginBox()" style="color:blue">登录</a> 在评论
+					</div>
+
+				</div>
+			</div>
+			<div class='sidebar'>
+	<div class='item'>
+		<h2>标签</h2>
+		<div class='tagbox'>
+									<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/33">相见恨晚</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/34">我很好</a>
+							<a href="http://localhost/cms/index.php/Index/Search/index.html/tid/32">奋斗</a>
+					</div>
+	</div>
+	<div class='item'>
+		<h2>友情链接</h2>
+		<ul class='flink'>
+									<li><a href="http://www.baidu.com">百度</a></li>
+							<li><a href="htttp:www.taobao.com">淘宝</a></li>
+							<li><a href="http://www.tmall.com">天猫</a></li>
+							<li><a href="http://www.sina.com.cn/">新浪</a></li>
+					</ul>
+	</div>
+	<div class='item'>
+		<h2>文章归档</h2>
+		<ul class='flink'>
+							<li style="height:auto;">
+					2012<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-3">2012-3<em>(3)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-4">2012-4<em>(5)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-5">2012-5<em>(4)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2012-10">2012-10<em>(6)</em></a>
+									</li>
+							<li style="height:auto;">
+					2013<br/>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-9">2013-9<em>(2)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-10">2013-10<em>(312)</em></a>
+											<a style="padding:0px 5px;" href="http://localhost/cms/index.php/Index/Search/index/archives/2013-11">2013-11<em>(1)</em></a>
+									</li>
+					</ul>
+	</div>
+</div>
+		</div>
+
+
+	<div id="footer">
+	<div class='bgbar'></div>
+	<div class='bottom'>
+		<div class='pos'>
+			<div class='footerNav'>
+													<a  target="_blank" href="http://www.houdunwang.com">后盾网</a>
+															<a  target="_blank" href="http://bbs.houdunwang.com">后盾网论坛</a>
+															<a  target="_blank" href="http://study.houdunwang.com">后盾网学习社区</a>
+															<a  target="_blank" href="http://vip.houdunwang.com">后盾网VIP</a>
+										</div>
+			<div class='copyright'>
+				© Copyright 2011-2013 www.houdunwang 			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<load file="__PUBLIC__/common/header.html">
+<body>
+<div id="window">
+	<div class='page_title'>
+		<strong>添加文章</strong>
+	</div>
+		<form action="{|U('News/add')}" method="post">
+			<table class="table table-bordered">
+				<tr>
+					<th width='20%'></th>
+					<th></th>
+				</tr>
+				<tr>
+					<td>文章标题</td>
+					<td><input type="text" name='title'></td>
+				</tr>
+				<tr>
+					<td>摘要</td>
+					<td><textarea name='digest'></textarea></td>
+				</tr>
+				<tr>
+					<td>所属分类</td>
+					<td>
+						<select name='cid'>
+							<foreach from="$category"  value="$v">
+								<option value='{$v.cid}'>&nbsp;|-{$v.html}{$v.cname}</option>
+							</foreach>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>文章属性</td>
+					<td>
+						<label>
+							热门:
+							<input name="attr[]" type="checkbox" value="热门">
+						</label>
+						<label>
+							推荐:
+							<input  name="attr[]" type="checkbox" value="推荐">
+						</label>
+						<label>
+							置顶:
+							<input  name="attr[]" type="checkbox" value="置顶">
+						</label>
+						<label>
+							图文:
+							<input  name="attr[]" type="checkbox" value="图文">
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>标签</td>
+					<td>
+							<foreach from="$tag"  value="$v">
+								{$v.tagname}
+								<input name='tag[]' type="checkbox" value='{$v.tid}'>
+							</foreach>
+					</td>
+				</tr>
+
+				<tr>
+					<td>缩略图</td>
+					<td>
+						<input type='hidden' name='image' value=''/>
+						<upload name="file" /></td>
+				</tr>
+				<tr>
+					<td>关键字</td>
+					<td><textarea name='keywords'></textarea></td>
+				</tr>
+				<tr>
+					<td>描述</td>
+					<td><textarea name='description'></textarea></td>
+				</tr>
+				<tr>
+					<td>内容</td>
+					<td><ueditor  width="80%" name="body" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" class="btn" value="提交"></td>
+				</tr>
+			</table>
+		</form>
+</div>
+</body>
+</html>

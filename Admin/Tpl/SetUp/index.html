@@ -1,0 +1,132 @@
+<load file="__PUBLIC__/common/header.html">
+<body>
+<div id="window">
+	<div class='page_title'>
+		<strong>站点配置</strong>
+	</div>
+	<div class='content'>
+	<h3>站点信息</h3>
+	<form id="form" action="{|U('SetUp/index')}" method="post">
+		<table class='table table-bordered'>
+			<thead>
+				<tr>
+					<th width="15%">名称</th>
+					<th width="20%">内容</th>
+					<th width="20%">标题</th>
+					<th width="45%">配置说明</th>
+				</tr>
+			</thead>
+			<tbody>
+			<foreach from="$config[1]" value="$v">
+				<input type="hidden" value="{$v['id']}" name="id[]"/>
+				<tr>
+					<td>{$v.name}</td>
+					<td><input type="text" name="value[]" value="{$v.value}"></td>
+					<td>{$v.title}</td>
+					<td>{$v.msg}</td>
+				</tr>
+			</foreach>
+			<tr>
+				<td></td>
+				<td><input class='btn' type="submit" value="修改配置"/></td>
+				<td></td>
+				<td></td>
+			</tr>
+			</tbody>
+		</table>
+	</form>
+	<h3>验证码配置</h3>
+	<form id="form" action="{|U('SetUp/index')}" method="post">
+		<table class='table table-bordered'>
+			<thead>
+				<tr>
+					<th width="15%">名称</th>
+					<th width="20%">内容</th>
+					<th width="20%">标题</th>
+					<th width="45%">配置说明</th>
+				</tr>
+			</thead>
+			<tbody>
+			<foreach from="$config[2]" value="$v">
+				<input type="hidden" value="{$v['id']}" name="id[]"/>
+				<tr>
+					<td>{$v.name}</td>
+					<td><input type="text" name="value[]" value="{$v.value}"></td>
+					<td>{$v.title}</td>
+					<td>{$v.msg}</td>
+				</tr>
+			</foreach>
+			<tr>
+				<td></td>
+				<td><input class='btn' type="submit" value="修改配置"/></td>
+				<td></td>
+				<td></td>
+			</tr>
+			</tbody>
+		</table>
+	</form>
+	<h3>水印配置</h3>
+	<form id="form" action="{|U('SetUp/index')}" method="post">
+		<table class='table table-bordered'>
+			<thead>
+
+				<tr>
+					<th width="15%">名称</th>
+					<th width="20%">内容</th>
+					<th width="20%">标题</th>
+					<th width="45%">配置说明</th>
+				</tr>
+			</thead>
+			<tbody>
+			<foreach from="$config[3]" value="$v">
+			<input type="hidden" value="{$v['id']}" name="id[]"/>
+				<tr>
+					<td>{$v.name}</td>
+					<td><input type="text" name="value[]" value="{$v.value}"></td>
+					<td>{$v.title}</td>
+					<td>{$v.msg}</td>
+				</tr>
+			</foreach>
+			<tr>
+				<td></td>
+				<td><input class='btn' type="submit" value="修改配置"/></td>
+				<td></td>
+				<td></td>
+			</tr>
+			</tbody>
+		</table>
+	</form>
+	<h3>缩率图配置</h3>
+	<form id="form" action="{|U('SetUp/index')}" method="post">
+		<table class='table table-bordered'>
+			<thead>
+				<tr>
+					<th width="15%">名称</th>
+					<th width="20%">内容</th>
+					<th width="20%">标题</th>
+					<th width="45%">配置说明</th>
+				</tr>
+			</thead>
+			<tbody>
+			<foreach from="$config[4]" value="$v">
+				<input type="hidden" value="{$v['id']}" name="id[]"/>
+				<tr>
+					<td>{$v.name}</td>
+					<td><input type="text" name="value[]" value="{$v.value}"></td>
+					<td>{$v.title}</td>
+					<td>{$v.msg}</td>
+				</tr>
+			</foreach>
+			<tr>
+				<td></td>
+				<td><input class='btn' type="submit" value="修改配置"/></td>
+				<td></td>
+				<td></td>
+			</tr>
+			</tbody>
+		</table>
+	</form>
+	</div>
+</div>
+</body>
+</html>
