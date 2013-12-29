@@ -162,7 +162,7 @@
 		<div class='tagbox'>
 					<?php
 			$db = M('tag_news');
-			$sql ='SELECT * FROM '.C('DB_PREFIX').'tag_news as t1 INNER JOIN '.C('DB_PREFIX').'tag as t ON t1.tag_tid=t.tid '."where news_id=1544".' group by t1.tag_tid order by count(*) desc limit 0,'."10";
+			$sql ='SELECT * FROM '.C('DB_PREFIX').'tag_news as t1 INNER JOIN '.C('DB_PREFIX').'tag as t ON t1.tag_tid=t.tid '."".' group by t1.tag_tid order by count(*) desc limit 0,'."10";
 			$data = $db->query($sql);
 		?><?php foreach($data as $tag):?><?php $tag["url"] = "http://localhost/cms/index.php/Index/Search/index.html/tid/$tag[tid]";?>
 				<a href="<?php echo $tag['url'];?>"><?php echo $tag['tagname'];?></a>
